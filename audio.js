@@ -16,8 +16,11 @@ function playSounds() {
 		"./sound/space12"
 	);
 	var index = Math.floor(Math.random() * (sounds.length));
-	$("#element").html('<audio id="sound" autobuffer><source src="' + sounds[index] + '.mp3"><source src="' + sounds[index] + '.ogg"></audio>');
+
+	var div = document.getElementById("element");
+	div.innerHTML = '<audio id="sound" autobuffer><source src="' + sounds[index] + '.mp3"><source src="' + sounds[index] + '.ogg"></audio>';
+
 	var aud = document.getElementById("sound");
-	aud.volume = 0.4;
-	aud.play(); // Thanks Android
+	aud.volume = 0.4; // Too lound?
+	aud.play(); // OK Android, no autoplay
 }
