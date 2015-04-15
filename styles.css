@@ -1,15 +1,64 @@
 body {
 	background: url('bg.jpeg');
 	background-size: cover;
+	overflow: hidden;
 }
 
 #core {
-	height: 150px;
-	width: 150px;
+	-webkit-animation: rotateCore 15s linear infinite;
+			animation: rotateCore 15s linear infinite;
 	background: url('space_core.png') no-repeat;
 	background-size: cover;
-
-	position: absolute;
+	height: 150px; width: 150px;
 	margin: auto;
+	position: absolute;
 	top: 0; bottom: 0; left: 0; right: 0;
+}
+
+@keyframes rotateCore {
+    0% {
+    	-ms-transform: rotate(0deg);
+    		transform: rotate(0deg);
+    }
+    20% {
+    	-ms-transform: rotate(20deg);
+    		transform: rotate(20deg);
+    }
+    40% {
+    	-ms-transform: rotate(100deg);
+    		transform: rotate(100deg);
+    }
+    60% {
+    	-ms-transform: rotate(220deg);
+    		transform: rotate(220deg);
+    }
+    80% {
+    	-ms-transform: rotate(300deg);
+    		transform: rotate(300deg);
+    }
+    100% {
+    	-ms-transform: rotate(360deg);
+    		transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotateCore {
+    0% {
+    	-webkit-transform: rotate(0deg);
+    }
+    20% {
+    	-webkit-transform: rotate(20deg);
+    }
+    40% {
+    	-webkit-transform: rotate(100deg);
+    }
+    60% {
+    	-webkit-transform: rotate(220deg);
+    }
+    80% {
+    	-webkit-transform: rotate(300deg);
+    }
+    100% {
+    	-webkit-transform: rotate(360deg);
+    }
 }
